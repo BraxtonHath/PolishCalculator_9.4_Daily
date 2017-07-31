@@ -18,22 +18,27 @@ public class ReversePolishCalc {
                 case "+":
                     System.out.println("Now adding");
                     stackTop.push(stackTop.pop() + stackTop.pop());
+                    System.out.println();
+                    System.out.println(stackTop);
                     break;
 
                 case "-":
                     System.out.println("Now subtracting");
                     stackTop.push(-stackTop.pop() + stackTop.pop());
+                    System.out.println(stackTop);
                     break;
 
                 case "*":
                     System.out.println("Now multiplying");
                     stackTop.push(stackTop.pop() * stackTop.pop());
+                    System.out.println(stackTop);
                     break;
 
                 case "/":
                     System.out.println("Now dividing");
                     double divisor = stackTop.pop();
                     stackTop.push(stackTop.pop() / divisor);
+                    System.out.println(stackTop);
                     break;
 
                 default:
@@ -42,6 +47,8 @@ public class ReversePolishCalc {
                     break;
             }
         }
+        System.out.println(stackTop);
+        System.out.println("============================================");
         System.out.println("Your result is: " + stackTop.peek());
         return stackTop.peek();
     }

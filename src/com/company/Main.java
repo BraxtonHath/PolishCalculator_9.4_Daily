@@ -37,6 +37,8 @@ public class Main {
     private static void checkResult(String expression, double expected, double actual) {
         if (expected == actual) {
             System.out.println("SUCCESS: " + expression + " is " + expected);
+            System.out.println("============================================");
+            System.out.println(" ");
         } else {
             System.out.println("ERROR: " + expression + " expected " + expected + " actual " + actual);
         }
